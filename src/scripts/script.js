@@ -22,5 +22,13 @@ criptButton.addEventListener("click", () => {
 });
 
 desencriptButton.addEventListener("click", () => {
-  console.log(decrypt(text.value));
+  if(text.value != "") {
+    rightContent.classList.add("disabled")
+    rightText.innerHTML = decrypt(text.value);
+    rightSection.classList.add("withOverflow");
+  } else {
+    rightContent.classList.remove("disabled")
+    rightSection.classList.remove("withOverflow");
+    rightText.innerHTML = "";
+  }
 })
