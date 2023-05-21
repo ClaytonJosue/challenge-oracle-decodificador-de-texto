@@ -1,11 +1,96 @@
 :root {
   --bg-color: #F3F5FC;
   --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
   --white-color: #FFFFFF;
   --gray-400: #495057;
   --gray-500: #343A40;
+  --font: "Roboto", "Arial";
 }
 
 body {
   background: var(--bg-color);
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+.main_content {
+  display: grid;
+  grid: auto/100px 1fr;
+}
+
+.logo {
+  width: 100px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-center;
+  gap: 10rem;
+}
+
+.left_content {
+  margin-top: 5rem;
+}
+
+.cript_area {
+  padding: 10px 15px 0px;
+  font-size: 25px;
+  color: var(--dark-blue-300);
+  background: none;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.cript_area::placeholder {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--dark-blue-300);
+}
+
+.informations_text {
+  font-size: 12px;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+}
+
+.informations_text::before {
+  content: url("../assets/alert-icon.svg");
+  margin: 0 5px;
+}
+
+.buttons_content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons {
+  width: 245px;
+  padding: 15px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.buttons:hover {
+  transform: scale(1.1);
+}
+
+.button_cript {
+  background-color: var(--dark-blue-300);
+  color: var(--white-color);
+}
+
+.button_cript:hover {
+  background-color: var(--dark-blue-400);
+}
+
+.button_descript {
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
 }
