@@ -106,13 +106,24 @@ body {
 }
 
 .right_section {
+  min-height: 100%;
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .typed_text {
   color: var(--gray-400);
   height: 100%;
   font-size: 20px;
+}
+
+.copy_button {
+  background-color: transparent;
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+  margin: 0 0 1rem 5rem;
 }
 
 .right_content {
@@ -144,5 +155,5 @@ body {
 }
 
 .withOverflow {
-  overflow: -moz-hidden-unscrollable;
+  overflow: auto;
 }
